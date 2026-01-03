@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESEN Skill-Match - Étudiants</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER NAVIGATION -->
+    <header id="main-header" class="header-principal">
+        <div class="container">
+            <nav class="navigation">
+                <div class="logo">
+                    <div class="logo-container">
+                    <div class="logo-icon"> <img src ="avatar_enseignant_98 (1).png"></a></div>
+                        <div>
+                            <h1>ESEN Skill-Match</h1>
+                            <p class="tagline">Connectez vos talents</p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="menu-navigation">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="etudiants.html" class="active">Étudiants</a></li>
+                    <li><a href="projets.html">Projets</a></li>
+                    <li><a href="inscription.html">S'inscrire</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Profils des Étudiants</h1>
+            <p>Découvrez les talents disponibles avec leurs compétences et expériences</p>
+        </div>
+    </section>
+
+    <!-- SECTION RECHERCHE ET FILTRES -->
+    <section id="recherche" class="search-section">
+        <div class="container">
+            <h2>Rechercher des Talents</h2>
+            <form id="form-recherche" class="search-form" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="recherche-competence"> Recherche par compétence ou nom :</label>
+                    <input type="text" id="recherche-competence" name="recherche" placeholder="Ex: Python, React, UI/UX..." oninput="filterStudents()">
+                </div>
+                
+                <div class="form-group">
+                    <label for="filtre-domaine"> Filtrer par domaine :</label>
+                    <select id="filtre-domaine" name="domaine" onchange="filterStudents()">
+                        <option value="tous">Tous les domaines</option>
+                        <option value="developpement">Développement Web & Mobile</option>
+                        <option value="ia">Intelligence Artificielle</option>
+                        <option value="data">Data Science & Analytics</option>
+                        <option value="marketing">Marketing Digital</option>
+                        <option value="design">Design UI/UX</option>
+                        <option value="business">Business Intelligence</option>
+                        <option value="cybersecurite">Cybersécurité</option>
+                        <option value="cloud">Cloud Computing</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label> Disponibilité :</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="disponibilite" value="projet" onchange="filterStudents()"> Projet de fin d'études</label>
+                        <label><input type="checkbox" name="disponibilite" value="stage" onchange="filterStudents()"> Stage</label>
+                        <label><input type="checkbox" name="disponibilite" value="startup" onchange="filterStudents()"> Startup</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label> Niveau d'études :</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="niveau" value="tous" checked onchange="filterStudents()"> Tous</label>
+                        <label><input type="radio" name="niveau" value="l1" onchange="filterStudents()"> Licence 1</label>
+                        <label><input type="radio" name="niveau" value="l2" onchange="filterStudents()"> Licence 2</label>
+                        <label><input type="radio" name="niveau" value="l3" onchange="filterStudents()"> Licence 3</label>
+                        <label><input type="radio" name="niveau" value="m1" onchange="filterStudents()"> Master 1</label>
+                        <label><input type="radio" name="niveau" value="m2" onchange="filterStudents()"> Master 2</label>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="button" onclick="filterStudents()" class="btn-search">Rechercher</button>
+                    <button type="reset" onclick="resetFilters()" class="btn-reset">Réinitialiser</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- SECTION PROFILS ÉTUDIANTS -->
+    <section id="etudiants" class="students-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tous les Profils</h2>
+                <p id="results-count" class="results-count"></p>
+            </div>
+            
+            <div id="students-grid" class="students-grid">
+                <!-- Les profils seront générés par JavaScript -->
+            </div>
+
+            <div id="no-results" class="no-results" style="display:none;">
+                <p>Aucun étudiant ne correspond à vos critères de recherche.</p>
+                <button onclick="resetFilters()" class="btn-primary">Réinitialiser les filtres</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="main-footer" class="footer-principal">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ESEN Skill-Match</h3>
+                    <p>Plateforme de mise en relation pour étudiants de l'ESEN</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="etudiants.html">Étudiants</a></li>
+                        <li><a href="projets.html">Projets</a></li>
+                        <li><a href="inscription.html">S'inscrire</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <address>
+                        École Supérieure d'Économie Numérique<br>
+                        La Manouba, Tunisie<br>
+                        Email: <a href="mailto:contact@esen.tn">contact@esen.tn</a>
+                    </address>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Suivez l'ESEN</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/esen.officiel" target="_blank" rel="noopener" class="social-btn facebook">
+                            <span></span> Facebook
+                        </a>
+                        <a href="https://www.linkedin.com/school/esen-manouba" target="_blank" rel="noopener" class="social-btn linkedin">
+                            <span></span> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ESEN Skill-Match. Tous droits réservés.</p>
+                <b>site réalisé par: fatma ezzaier EB - isra ben khassib EB - chahed ben aissa EB - nourelhouda khiari EB</b>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

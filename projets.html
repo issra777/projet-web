@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESEN Skill-Match - Projets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER NAVIGATION-->
+    <header id="main-header" class="header-principal">
+        <div class="container">
+            <nav class="navigation">
+                <div class="logo">
+                    <div class="logo-container">
+                    <div class="logo-icon"> <img src ="avatar_enseignant_98 (1).png"></a></div>
+                        <div>
+                            <h1>ESEN Skill-Match</h1>
+                            <p class="tagline">Connectez vos talents</p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="menu-navigation">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="etudiants.html">Étudiants</a></li>
+                    <li><a href="projets.html" class="active">Projets</a></li>
+                    <li><a href="inscription.html">S'inscrire</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Projets en Recherche de Talents</h1>
+            <p>Découvrez les opportunités de collaboration et rejoignez des projets innovants</p>
+        </div>
+    </section>
+
+    <!-- SECTION PROJETS -->
+    <section id="projets" class="projects-section">
+        <div class="container">
+            <h2>Projets Disponibles</h2>
+            
+            <div class="projects-grid">
+                <!-- Projet 1 -->
+                <div class="project-card" onclick="showProjectModal(0)">
+                    <div class="project-header">
+                        <span class="project-badge pfe"> PFE</span>
+                        <span class="project-status open">Ouvert</span>
+                    </div>
+                    <h3>Application Mobile E-Commerce</h3>
+                    <p class="project-description">Marketplace tunisienne avec paiement intégré et géolocalisation</p>
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="icon"></span>
+                            <span>Développement</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="icon"></span>
+                            <span>6 mois</span>
+                        </div>
+                    </div>
+                    <div class="project-skills">
+                        <span class="skill-badge">React Native</span>
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">UI/UX</span>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="project-card" onclick="showProjectModal(1)">
+                    <div class="project-header">
+                        <span class="project-badge project"> Projet</span>
+                        <span class="project-status open">Ouvert</span>
+                    </div>
+                    <h3>Plateforme de Data Analytics</h3>
+                    <p class="project-description">Dashboard BI avec Machine Learning pour prédictions business</p>
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="icon"></span>
+                            <span>Data Science</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="icon"></span>
+                            <span>4 mois</span>
+                        </div>
+                    </div>
+                    <div class="project-skills">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">ML</span>
+                        <span class="skill-badge">Tableau</span>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="project-card" onclick="showProjectModal(2)">
+                    <div class="project-header">
+                        <span class="project-badge creation">Création</span>
+                        <span class="project-status urgent">Urgent</span>
+                    </div>
+                    <h3>Startup FinTech</h3>
+                    <p class="project-description">Plateforme de paiement mobile innovante pour le marché tunisien</p>
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="icon"></span>
+                            <span>Startup</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="icon"></span>
+                            <span>8 mois</span>
+                        </div>
+                    </div>
+                    <div class="project-skills">
+                        <span class="skill-badge">Blockchain</span>
+                        <span class="skill-badge">Cybersécurité</span>
+                        <span class="skill-badge">React</span>
+                    </div>
+                </div>
+
+                <!-- Projet 4 -->
+                <div class="project-card" onclick="showProjectModal(3)">
+                    <div class="project-header">
+                        <span class="project-badge pfe"> PFE</span>
+                        <span class="project-status open">Ouvert</span>
+                    </div>
+                    <h3>Système de Gestion Scolaire</h3>
+                    <p class="project-description">Plateforme EdTech avec gestion des notes, absences et communication</p>
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="icon"></span>
+                            <span>Développement</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="icon"></span>
+                            <span>5 mois</span>
+                        </div>
+                    </div>
+                    <div class="project-skills">
+                        <span class="skill-badge">Laravel</span>
+                        <span class="skill-badge">Vue.js</span>
+                        <span class="skill-badge">MySQL</span>
+                    </div>
+                </div>
+
+                <!-- Projet 5 -->
+                <div class="project-card" onclick="showProjectModal(4)">
+                    <div class="project-header">
+                        <span class="project-badge debut"> Début d'études</span>
+                        <span class="project-status closing">Bientôt fermé</span>
+                    </div>
+                    <h3>Application IoT Smart Home</h3>
+                    <p class="project-description">Solution domotique connectée pour contrôle maison intelligente</p>
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="icon"></span>
+                            <span>IoT</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="icon"></span>
+                            <span>4 mois</span>
+                        </div>
+                    </div>
+                    <div class="project-skills">
+                        <span class="skill-badge">Arduino</span>
+                        <span class="skill-badge">React</span>
+                        <span class="skill-badge">Firebase</span>
+                    </div>
+                </div>
+
+                <!-- Projet 6 -->
+                <div class="project-card" onclick="showProjectModal(5)">
+                    <div class="project-header">
+                        <span class="project-badge creation"> Création</span>
+                        <span class="project-status urgent">Urgent</span>
+                    </div>
+                    <h3>Assistant Virtuel IA</h3>
+                    <p class="project-description">Chatbot intelligent adapté au dialecte tunisien avec NLP</p>
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="icon"></span>
+                            <span>IA</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="icon"></span>
+                            <span>6 mois</span>
+                        </div>
+                    </div>
+                    <div class="project-skills">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">NLP</span>
+                        <span class="skill-badge">TensorFlow</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal pour les détails -->
+    <div id="project-modal" class="modal" onclick="closeProjectModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-modal" onclick="closeProjectModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Vous Avez Un Projet ?</h2>
+                <p>Publiez votre projet et trouvez les talents dont vous avez besoin !</p>
+                <div class="cta-buttons">
+                    <a href="inscription.html" class="btn-primary">Publier Mon Projet</a>
+                    <a href="etudiants.html" class="btn-secondary">Trouver des Talents</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="main-footer" class="footer-principal">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ESEN Skill-Match</h3>
+                    <p>Plateforme de mise en relation pour étudiants de l'ESEN</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="etudiants.html">Étudiants</a></li>
+                        <li><a href="projets.html">Projets</a></li>
+                        <li><a href="inscription.html">S'inscrire</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <address>
+                        École Supérieure d'Économie Numérique<br>
+                        La Manouba, Tunisie<br>
+                        Email: <a href="mailto:contact@esen.tn">contact@esen.tn</a>
+                    </address>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Suivez l'ESEN</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/esen.officiel" target="_blank" rel="noopener" class="social-btn facebook">
+                            <span></span> Facebook
+                        </a>
+                        <a href="https://www.linkedin.com/school/esen-manouba" target="_blank" rel="noopener" class="social-btn linkedin">
+                            <span></span> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ESEN Skill-Match. Tous droits réservés.</p>
+                 <b>site réalisé par: fatma ezzaier EB - isra ben khassib EB - chahed ben aissa EB - nourelhouda khiari EB</b>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
