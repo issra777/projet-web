@@ -1492,7 +1492,7 @@ address a:hover {
 /* ======================================
    RESPONSIVE
    ====================================== */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
     .navigation {
         flex-direction: column;
         gap: 1rem;
@@ -1512,11 +1512,16 @@ address a:hover {
         font-size: 1.1rem;
     }
     
-    .students-grid {
-        grid-template-columns: 1fr;
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
     }
-    
-    .projects-grid {
+
+    .students-grid,
+    .projects-grid,
+    .features-grid,
+    .testimonials-grid,
+    .domains-grid {
         grid-template-columns: 1fr;
     }
     
@@ -1530,10 +1535,6 @@ address a:hover {
     }
     
     .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .domains-grid {
         grid-template-columns: 1fr;
     }
     
@@ -1542,6 +1543,7 @@ address a:hover {
         margin: 10% auto;
     }
 }
+
 
 /* ======================================
    ANIMATIONS SUPPLÉMENTAIRES
